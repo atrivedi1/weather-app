@@ -3,5 +3,5 @@ html, body, input, select, textarea {
 }
 
 .btn-primary {
-  margin-top: 5px;
+  width: 100%;
 }

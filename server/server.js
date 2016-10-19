@@ -1,15 +1,14 @@
 //params
 var express = require('express');
 var bodyParser = require('body-parser');
-var path = require('path');
-var rootPath = "../client/index.html"
+var rootDirectory = "../client"
 
 //create instance of express server
 var app = express();
 
 //middleware
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../client'))
+app.use(express.static(__dirname + rootDirectory))
 
 //eventually might want to add some routes
 
