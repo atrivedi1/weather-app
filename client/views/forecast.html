@@ -16,7 +16,9 @@ Days: <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2' }">2</a> |
 
       <weather-report 
         weather-day="dailyInfo"
-        convert-to-standard="convertToFahrenheit(daytimeTemp)" 
+        format-text="capitalizeFirstLetter(text)"
+        determine-icon="determineIconUrlSuffix(iconCode)"
+        convert-to-standard="convertToFahrenheit(temp)"
         convert-to-date="convertToDate(dt)"
         date-format="MMMM d, y">
       </weather-report>
