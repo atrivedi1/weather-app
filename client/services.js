@@ -15,3 +15,18 @@ weatherApp.service('weatherService', function($resource) {
     return weatherAPI.get({ q: city, cnt: days });
   }
 });
+
+weatherApp.service("textFormattingService", function() {
+
+  this.capitalizeFirstLetter = function(text) {
+    var textArr = text.split(" ");
+    var updatedTextArr = [];
+
+    textArr.forEach(function(word) {
+      var capitalizedWord = word.slice(0,1).toUpperCase() + word.slice(1);
+      updatedTextArr.push(capitalizedWord)
+    });
+
+    return updatedTextArr.join(" ");
+  }
+})
