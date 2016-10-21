@@ -8,6 +8,7 @@ weatherApp.directive("weatherReport", function() {
     scope: {
       weatherDay: "=",
       formatText: "&",
+      determineIcon: "&",
       convertToStandard: "&",
       convertToDate: "&",
       dateFormat: "@"

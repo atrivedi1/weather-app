@@ -1,10 +1,16 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
+
+      <h3 class="panel-title">
+        {{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}
+        <img ng-src="http://openweathermap.org/img/w/{{ determineIcon({ iconCode: weatherDay.weather[0].icon }) }}"
+             alt="Icon depicting current weather.">
+      </h3>
     </div>
+
     <div class="panel-body">
-      {{ formatText({ text: weatherDay.weather[0].description }) }}
-      Daytime Temp: {{ convertToStandard({ temp: weatherDay.temp.day }) }}
-      Nighttime Temp: {{ convertToStandard({ temp: weatherDay.temp.night }) }}
+      <div class="weather-description">{{ formatText({ text: weatherDay.weather[0].description }) }}</div>
+      <div class="daytime-temp">Daytime Temp: {{ convertToStandard({ temp: weatherDay.temp.day }) }}</div>
+      <div class="nighttime-temp">Nighttime Temp: {{ convertToStandard({ temp: weatherDay.temp.night }) }}</div>
     </div>
 </div>

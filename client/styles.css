@@ -2,6 +2,16 @@ html, body, input, select, textarea {
   font-size: 1.05em !important; 
 }
 
+.panel-title {
+  font-weight: 700;
+}
+
+.weather-description {
+  font-style: italic;
+}
+
 .btn-primary {
   width: 100%;
 }
+
+
